@@ -167,7 +167,7 @@ export default async function JobPost({
                   <span
                     key={category}
                     className={
-                      "min-w-16 border rounded-full text-center p-2 text-" +
+                      "min-w-16 border rounded-full text-center p-2 " +
                       Category2Color.get(category)
                     }
                   >

@@ -17,15 +17,15 @@ type JobCardProps = {
 };
 
 export const Category2Color = new Map<string, string>([
-  ["Customer Service", "blue-500"],
-  ["Data Science", "yellow-500"],
-  ["Support", "cyan-500"],
-  ["Analytics", "purple-500"],
-  ["Design", "pink-500"],
-  ["Art", "emerald-400"],
-  ["IT", "amber-700"],
-  ["Development", "orange-500"],
-  ["Marketing", "violet-700"]
+  ["Customer Service", "text-blue-500"],
+  ["Data Science", "text-yellow-500"],
+  ["Support", "text-cyan-500"],
+  ["Analytics", "text-purple-500"],
+  ["Design", "text-pink-500"],
+  ["Art", "text-emerald-400"],
+  ["IT", "text-amber-700"],
+  ["Development", "text-orange-500"],
+  ["Marketing", "text-violet-700"]
 ]);
   
 
@@ -64,7 +64,7 @@ const JobCard = ({
             {categories.map((category, index) => (
               <span
                 className={
-                  "min-w-16 border rounded-full text-center p-2 text-" + Category2Color.get(category)
+                  "min-w-16 border rounded-full text-center p-2 " + Category2Color.get(category)
                 }
                 key={index}
               >
