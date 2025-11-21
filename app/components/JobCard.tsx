@@ -1,22 +1,34 @@
-type Skill = {
-  name: string;
-  color: string;
-};
+import Link from "next/link";
 
 type Image = {
   url: string;
   alt: string;
 };
 
-export type JobCardProps = {
+type JobCardProps = {
   image: Image;
   jobTitle: string;
   organizationName: string;
   organizationAddress: string;
   jobDescription: string;
   jobNature: string;
-  skills: Skill[];
+  categories: string[];
+  index: number
 };
+
+export const Category2Color = new Map<string, string>([
+  ["Customer Service", "blue-500"],
+  ["Data Science", "yellow-500"],
+  ["Support", "cyan-500"],
+  ["Analytics", "purple-500"],
+  ["Design", "pink-500"],
+  ["Art", "emerald-400"],
+  ["IT", "amber-700"],
+  ["Development", "orange-500"],
+  ["Marketing", "violet-700"]
+]);
+  
+
 
 const JobCard = ({
   image,
@@ -25,16 +37,17 @@ const JobCard = ({
   organizationAddress,
   jobDescription,
   jobNature,
-  skills,
+  categories,
+  index
 }: JobCardProps) => {
   return (
     <>
-      <div className="border-2 rounded-4xl border-gray-200 p-8 flex gap-4">
+      <div className="border-2 rounded-4xl border-gray-200 p-8 flex gap-4 hover:shadow-2xl transition ease-in">
         <div>
           <img src={image.url} alt={image.alt} className="max-w-16" />
         </div>
         <div className="flex flex-col gap-2.5">
-          <h1 className="font-bold text-2xl">{jobTitle}</h1>
+          <Link href={"/"+index} className="font-bold text-2xl hover:cursor-pointer">{jobTitle}</Link>
           <div className="flex flex-row gap-2 text-gray-500 text">
             <h2>{organizationName}</h2>
             <span>•</span>
@@ -48,14 +61,14 @@ const JobCard = ({
               <span className="text-green-500">{jobNature}</span>
             </div>
             <div className="border h-1/1 border-gray-300"></div>
-            {skills.map((skill, index) => (
+            {categories.map((category, index) => (
               <span
                 className={
-                  "min-w-16 border rounded-full text-center p-2 " + skill.color
+                  "min-w-16 border rounded-full text-center p-2 text-" + Category2Color.get(category)
                 }
                 key={index}
               >
-                {skill.name}
+                {category}
               </span>
             ))}
           </div>
