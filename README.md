@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Listing Application - Next.js + Tailwind CSS
 
-## Getting Started
+## 📌 Overview
 
-First, run the development server:
+This project is a Job Listing Application Dashboard built using Next.js and Tailwind CSS.
+This task is part of the A2SV Web Track Assignments.
 
-```bash
+This project demonstrates:
+
+- A reusable Job Card component
+- A complete Job Listing Dashboard
+- UI built based on the provided Figma design
+- Dummy data populated from the given JSON
+- Styled completely using Tailwind CSS
+
+## 🧠 Technologies Used
+
+- React
+- Next.js
+- Tailwind CSS
+
+## 📥 Installation & Setup
+
+Follow these steps to run the project locally:
+
+1. Clone the repository
+```
+git clone https://github.com/PlayzAhmed/a2sv-job-listing-application-task.git
+```
+2. Install dependencies
+```
+npm install
+```
+3. Run the development server
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will run at:
+👉 http://localhost:3000/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📚 Learning Objectives
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project helped practice:
 
-## Learn More
+- Building reusable components with Next.js
+- Using Tailwind CSS for UI design
+- Implementing layouts based on Figma design
+- Handling and mapping static JSON data
+- Structuring scalable frontend applications using App Router
 
-To learn more about Next.js, take a look at the following resources:
+## 🖼 Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Home Page:**
+<img width="2814" height="1335" alt="image" src="https://github.com/user-attachments/assets/59a19d62-207d-455c-939e-775c8c4c78e3" />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Job Post Page:**
+<img width="2879" height="1266" alt="image" src="https://github.com/user-attachments/assets/c1d9dbc4-c2d0-4b28-9ba2-8b8dfc7d957c" />
 
-## Deploy on Vercel
+**Error Page:**
+<img width="2879" height="1345" alt="image" src="https://github.com/user-attachments/assets/5cdc29de-52a6-4093-9c45-e682abdabab7" />
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
